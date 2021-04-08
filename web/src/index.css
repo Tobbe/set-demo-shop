@@ -1,0 +1,43 @@
+.tshirts-page img {
+  margin: 1em;
+  cursor: pointer;
+}
+
+.cart {
+  text-align: right;
+}
+
+.cart span {
+  font-size: larger;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-layout header {
+  padding: 1em;
+}
+
+.main-layout main {
+  background-color: lightgray;
+  flex: 1;
+  padding: 1em;
+}
+
+.main-layout nav {
+  width: 300px;
+  background-color: gray;
+  padding: 1em;
+}
+
+.main-layout nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.main-layout nav a {
+  color: white;
+  font-size: larger;
+}
