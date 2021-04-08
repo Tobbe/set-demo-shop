@@ -1,3 +1,5 @@
+import { useCartAddItem } from "src/contexts/CartContext"
+
 export const QUERY = gql`
   query TshirtsQuery($bandSlug: String!) {
     tshirts: tshirts(bandSlug: $bandSlug) {
@@ -16,7 +18,9 @@ export const Empty = () => <div>Empty</div>
 
 export const Failure = ({ error }) => <div>Error: {error.message}</div>
 
-export const Success = ({ tshirts, band, addItem }) => {
+export const Success = ({ tshirts, band }) => {
+  const addItem = useCartAddItem()
+
   return (
     <div className="tshirts-page">
       <h1>{band.name}</h1>

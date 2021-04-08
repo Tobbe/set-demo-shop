@@ -1,14 +1,10 @@
 import { Link, routes } from '@redwoodjs/router'
-import { useState } from 'react'
 
 import MenuCell from 'src/components/MenuCell'
+import { useCartItems } from 'src/contexts/CartContext'
 
 const MainLayout = ({ children }) => {
-  const [items, setItems] = useState(0)
-
-  const addItem = () => {
-    setItems((items) => items + 1)
-  }
+  const items = useCartItems()
 
   return (
     <div className="main-layout">
@@ -27,7 +23,7 @@ const MainLayout = ({ children }) => {
             <MenuCell />
           </ul>
         </nav>
-        <main>{children(addItem)}</main>
+        <main>{children}</main>
       </div>
     </div>
   )
